@@ -1,4 +1,4 @@
-// swift-tools-version:5.1
+// swift-tools-version:5.5
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -11,7 +11,7 @@ let macOSVersion: SupportedPlatform.MacOSVersion = .v10_10
 
 #if os(Linux)
 let extraPackageDependencies: [Package.Dependency] = [
-  .package(url: "https://github.com/apple/swift-crypto.git", from: "1.1.2")
+  .package(url: "https://github.com/apple/swift-crypto.git", from: "1.0.0" ..< "3.0.0")
 ]
 #else
 let extraPackageDependencies: [Package.Dependency] = []
